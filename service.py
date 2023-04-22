@@ -1,39 +1,37 @@
 import pandas as pd
-from pypmml import Model
-from typing import List
+import joblib
 
 
-def predict(data: List[any]):
-    model = Model.fromFile("./dtc.pmml")
+def predict(data):
+    model = joblib.load("./models/dtc_model.joblib")
 
     valid_data = preprocessData(data)
 
     if valid_data == 0:
         return -1
 
-    prediction = model.predict(valid_data)
-    print(model.inputNames)
-    print(model.outputNames)
-    return prediction
+    prediction = model.predict([valid_data])
+
+    return int(prediction[0].item())
 
 
-def preprocessData(data: List[any]):
+def preprocessData(data):
     if len(data) != 15:
         return 0
 
-    dataset = pd.read_csv("./lungCancerDatabase.csv")
+    dataset = pd.read_csv("./dataset/lungCancerDatabase.csv")
 
     processed_data = []
 
     for index, item in enumerate(data):
-        if index == 4 and type(item) == str:
+        if index == 0 and type(item) == str:
             if item == "M" or item == "Male":
                 processed_data.append(1)
             elif item == "F" or item == "Female":
                 processed_data.append(0)
             else:
                 return 0
-        elif index == 5:
+        elif index == 1:
             if type(item) == int:
                 min_val = min(dataset.iloc[:, 1])
                 max_val = max(dataset.iloc[:, 1])
@@ -52,5 +50,4 @@ def preprocessData(data: List[any]):
     return processed_data
 
 
-print(predict([1, 1, 1, 1, "F", 30, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
-#  1    2  3  4  5  6  7  8  9 10 11 12 13 14 15
+# print(predict(["M", 21, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]))
