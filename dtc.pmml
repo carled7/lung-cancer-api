@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" xmlns:data="http://jpmml.org/jpmml-model/InlineTable" version="4.4">
+	<Header>
+		<Application name="SkLearn2PMML package" version="0.92.0"/>
+		<Timestamp>2023-04-22T02:48:33Z</Timestamp>
+	</Header>
+	<DataDictionary>
+		<DataField name="y" optype="categorical" dataType="integer">
+			<Value value="0"/>
+			<Value value="1"/>
+		</DataField>
+		<DataField name="x1" optype="continuous" dataType="float"/>
+		<DataField name="x2" optype="continuous" dataType="float"/>
+		<DataField name="x3" optype="continuous" dataType="float"/>
+		<DataField name="x4" optype="continuous" dataType="float"/>
+		<DataField name="x5" optype="continuous" dataType="float"/>
+		<DataField name="x6" optype="continuous" dataType="float"/>
+		<DataField name="x7" optype="continuous" dataType="float"/>
+		<DataField name="x8" optype="continuous" dataType="float"/>
+		<DataField name="x9" optype="continuous" dataType="float"/>
+		<DataField name="x10" optype="continuous" dataType="float"/>
+		<DataField name="x11" optype="continuous" dataType="float"/>
+		<DataField name="x12" optype="continuous" dataType="float"/>
+		<DataField name="x13" optype="continuous" dataType="float"/>
+		<DataField name="x14" optype="continuous" dataType="float"/>
+		<DataField name="x15" optype="continuous" dataType="float"/>
+	</DataDictionary>
+	<TreeModel functionName="classification" algorithmName="sklearn.tree._classes.DecisionTreeClassifier" missingValueStrategy="nullPrediction">
+		<MiningSchema>
+			<MiningField name="y" usageType="target"/>
+			<MiningField name="x9"/>
+			<MiningField name="x14"/>
+			<MiningField name="x10"/>
+			<MiningField name="x6"/>
+			<MiningField name="x1"/>
+			<MiningField name="x2"/>
+			<MiningField name="x7"/>
+			<MiningField name="x13"/>
+			<MiningField name="x15"/>
+			<MiningField name="x5"/>
+			<MiningField name="x8"/>
+			<MiningField name="x4"/>
+			<MiningField name="x11"/>
+			<MiningField name="x3"/>
+			<MiningField name="x12"/>
+		</MiningSchema>
+		<Output>
+			<OutputField name="probability(0)" optype="continuous" dataType="double" feature="probability" value="0"/>
+			<OutputField name="probability(1)" optype="continuous" dataType="double" feature="probability" value="1"/>
+		</Output>
+		<LocalTransformations>
+			<DerivedField name="double(x9)" optype="continuous" dataType="double">
+				<FieldRef field="x9"/>
+			</DerivedField>
+			<DerivedField name="double(x14)" optype="continuous" dataType="double">
+				<FieldRef field="x14"/>
+			</DerivedField>
+			<DerivedField name="double(x10)" optype="continuous" dataType="double">
+				<FieldRef field="x10"/>
+			</DerivedField>
+			<DerivedField name="double(x6)" optype="continuous" dataType="double">
+				<FieldRef field="x6"/>
+			</DerivedField>
+			<DerivedField name="double(x1)" optype="continuous" dataType="double">
+				<FieldRef field="x1"/>
+			</DerivedField>
+			<DerivedField name="double(x2)" optype="continuous" dataType="double">
+				<FieldRef field="x2"/>
+			</DerivedField>
+			<DerivedField name="double(x7)" optype="continuous" dataType="double">
+				<FieldRef field="x7"/>
+			</DerivedField>
+			<DerivedField name="double(x13)" optype="continuous" dataType="double">
+				<FieldRef field="x13"/>
+			</DerivedField>
+			<DerivedField name="double(x15)" optype="continuous" dataType="double">
+				<FieldRef field="x15"/>
+			</DerivedField>
+			<DerivedField name="double(x5)" optype="continuous" dataType="double">
+				<FieldRef field="x5"/>
+			</DerivedField>
+			<DerivedField name="double(x8)" optype="continuous" dataType="double">
+				<FieldRef field="x8"/>
+			</DerivedField>
+			<DerivedField name="double(x4)" optype="continuous" dataType="double">
+				<FieldRef field="x4"/>
+			</DerivedField>
+			<DerivedField name="double(x11)" optype="continuous" dataType="double">
+				<FieldRef field="x11"/>
+			</DerivedField>
+			<DerivedField name="double(x3)" optype="continuous" dataType="double">
+				<FieldRef field="x3"/>
+			</DerivedField>
+			<DerivedField name="double(x12)" optype="continuous" dataType="double">
+				<FieldRef field="x12"/>
+			</DerivedField>
+		</LocalTransformations>
+		<Node>
+			<True/>
+			<Node>
+				<SimplePredicate field="double(x9)" operator="lessOrEqual" value="0.5"/>
+				<Node>
+					<SimplePredicate field="double(x14)" operator="lessOrEqual" value="0.5"/>
+					<Node>
+						<SimplePredicate field="double(x10)" operator="lessOrEqual" value="0.5"/>
+						<Node>
+							<SimplePredicate field="double(x6)" operator="lessOrEqual" value="0.5"/>
+							<Node>
+								<SimplePredicate field="double(x1)" operator="lessOrEqual" value="0.5"/>
+								<Node score="1" recordCount="1">
+									<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.469696968793869"/>
+									<ScoreDistribution value="0" recordCount="0"/>
+									<ScoreDistribution value="1" recordCount="1"/>
+								</Node>
+								<Node score="0" recordCount="53">
+									<SimplePredicate field="double(x7)" operator="lessOrEqual" value="0.5"/>
+									<ScoreDistribution value="0" recordCount="53"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+								<Node score="1" recordCount="2">
+									<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.5984848439693451"/>
+									<ScoreDistribution value="0" recordCount="0"/>
+									<ScoreDistribution value="1" recordCount="2"/>
+								</Node>
+								<Node score="1" recordCount="1">
+									<SimplePredicate field="double(x13)" operator="lessOrEqual" value="0.5"/>
+									<ScoreDistribution value="0" recordCount="0"/>
+									<ScoreDistribution value="1" recordCount="1"/>
+								</Node>
+								<Node score="0" recordCount="36">
+									<True/>
+									<ScoreDistribution value="0" recordCount="36"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+							</Node>
+							<Node>
+								<SimplePredicate field="double(x13)" operator="lessOrEqual" value="0.5"/>
+								<Node>
+									<SimplePredicate field="double(x15)" operator="lessOrEqual" value="0.5"/>
+									<Node score="1" recordCount="1">
+										<SimplePredicate field="double(x5)" operator="lessOrEqual" value="0.5"/>
+										<ScoreDistribution value="0" recordCount="0"/>
+										<ScoreDistribution value="1" recordCount="1"/>
+									</Node>
+									<Node score="0" recordCount="4">
+										<True/>
+										<ScoreDistribution value="0" recordCount="4"/>
+										<ScoreDistribution value="1" recordCount="0"/>
+									</Node>
+								</Node>
+								<Node score="0" recordCount="5">
+									<True/>
+									<ScoreDistribution value="0" recordCount="5"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+							</Node>
+							<Node score="1" recordCount="1">
+								<True/>
+								<ScoreDistribution value="0" recordCount="0"/>
+								<ScoreDistribution value="1" recordCount="1"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="double(x8)" operator="lessOrEqual" value="0.5"/>
+							<Node score="1" recordCount="1">
+								<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.5000000149011612"/>
+								<ScoreDistribution value="0" recordCount="0"/>
+								<ScoreDistribution value="1" recordCount="1"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.7727272808551788"/>
+								<Node>
+									<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.6439393758773804"/>
+									<Node>
+										<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.5833333134651184"/>
+										<Node score="0" recordCount="4">
+											<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.560606062412262"/>
+											<ScoreDistribution value="0" recordCount="4"/>
+											<ScoreDistribution value="1" recordCount="0"/>
+										</Node>
+										<Node score="1" recordCount="1">
+											<True/>
+											<ScoreDistribution value="0" recordCount="0"/>
+											<ScoreDistribution value="1" recordCount="1"/>
+										</Node>
+									</Node>
+									<Node score="0" recordCount="21">
+										<True/>
+										<ScoreDistribution value="0" recordCount="21"/>
+										<ScoreDistribution value="1" recordCount="0"/>
+									</Node>
+								</Node>
+								<Node>
+									<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.689393937587738"/>
+									<Node score="1" recordCount="1">
+										<SimplePredicate field="double(x4)" operator="lessOrEqual" value="0.5"/>
+										<ScoreDistribution value="0" recordCount="0"/>
+										<ScoreDistribution value="1" recordCount="1"/>
+									</Node>
+									<Node score="0" recordCount="2">
+										<SimplePredicate field="double(x1)" operator="lessOrEqual" value="0.5"/>
+										<ScoreDistribution value="0" recordCount="2"/>
+										<ScoreDistribution value="1" recordCount="0"/>
+									</Node>
+									<Node score="1" recordCount="1">
+										<True/>
+										<ScoreDistribution value="0" recordCount="0"/>
+										<ScoreDistribution value="1" recordCount="1"/>
+									</Node>
+								</Node>
+								<Node score="0" recordCount="9">
+									<True/>
+									<ScoreDistribution value="0" recordCount="9"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+							</Node>
+							<Node score="1" recordCount="1">
+								<True/>
+								<ScoreDistribution value="0" recordCount="0"/>
+								<ScoreDistribution value="1" recordCount="1"/>
+							</Node>
+						</Node>
+						<Node score="1" recordCount="7">
+							<True/>
+							<ScoreDistribution value="0" recordCount="0"/>
+							<ScoreDistribution value="1" recordCount="7"/>
+						</Node>
+					</Node>
+					<Node>
+						<SimplePredicate field="double(x11)" operator="lessOrEqual" value="0.5"/>
+						<Node>
+							<SimplePredicate field="double(x7)" operator="lessOrEqual" value="0.5"/>
+							<Node score="0" recordCount="17">
+								<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.6666666567325592"/>
+								<ScoreDistribution value="0" recordCount="17"/>
+								<ScoreDistribution value="1" recordCount="0"/>
+							</Node>
+							<Node>
+								<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.719696968793869"/>
+								<Node score="0" recordCount="2">
+									<SimplePredicate field="double(x6)" operator="lessOrEqual" value="0.5"/>
+									<ScoreDistribution value="0" recordCount="2"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+								<Node score="1" recordCount="3">
+									<True/>
+									<ScoreDistribution value="0" recordCount="0"/>
+									<ScoreDistribution value="1" recordCount="3"/>
+								</Node>
+							</Node>
+							<Node score="0" recordCount="8">
+								<True/>
+								<ScoreDistribution value="0" recordCount="8"/>
+								<ScoreDistribution value="1" recordCount="0"/>
+							</Node>
+						</Node>
+						<Node score="1" recordCount="2">
+							<True/>
+							<ScoreDistribution value="0" recordCount="0"/>
+							<ScoreDistribution value="1" recordCount="2"/>
+						</Node>
+					</Node>
+					<Node>
+						<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.530303031206131"/>
+						<Node score="0" recordCount="1">
+							<SimplePredicate field="double(x3)" operator="lessOrEqual" value="0.5"/>
+							<ScoreDistribution value="0" recordCount="1"/>
+							<ScoreDistribution value="1" recordCount="0"/>
+						</Node>
+						<Node score="1" recordCount="1">
+							<True/>
+							<ScoreDistribution value="0" recordCount="0"/>
+							<ScoreDistribution value="1" recordCount="1"/>
+						</Node>
+					</Node>
+					<Node score="1" recordCount="12">
+						<True/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="12"/>
+					</Node>
+				</Node>
+				<Node>
+					<SimplePredicate field="double(x6)" operator="lessOrEqual" value="0.5"/>
+					<Node>
+						<SimplePredicate field="double(x8)" operator="lessOrEqual" value="0.5"/>
+						<Node>
+							<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.5151515007019043"/>
+							<Node score="0" recordCount="1">
+								<SimplePredicate field="double(x7)" operator="lessOrEqual" value="0.5"/>
+								<ScoreDistribution value="0" recordCount="1"/>
+								<ScoreDistribution value="1" recordCount="0"/>
+							</Node>
+							<Node score="1" recordCount="3">
+								<True/>
+								<ScoreDistribution value="0" recordCount="0"/>
+								<ScoreDistribution value="1" recordCount="3"/>
+							</Node>
+						</Node>
+						<Node>
+							<SimplePredicate field="double(x12)" operator="lessOrEqual" value="0.5"/>
+							<Node>
+								<SimplePredicate field="double(x1)" operator="lessOrEqual" value="0.5"/>
+								<Node score="1" recordCount="1">
+									<SimplePredicate field="double(x10)" operator="lessOrEqual" value="0.5"/>
+									<ScoreDistribution value="0" recordCount="0"/>
+									<ScoreDistribution value="1" recordCount="1"/>
+								</Node>
+								<Node score="0" recordCount="7">
+									<True/>
+									<ScoreDistribution value="0" recordCount="7"/>
+									<ScoreDistribution value="1" recordCount="0"/>
+								</Node>
+							</Node>
+							<Node score="0" recordCount="18">
+								<True/>
+								<ScoreDistribution value="0" recordCount="18"/>
+								<ScoreDistribution value="1" recordCount="0"/>
+							</Node>
+						</Node>
+						<Node score="1" recordCount="2">
+							<True/>
+							<ScoreDistribution value="0" recordCount="0"/>
+							<ScoreDistribution value="1" recordCount="2"/>
+						</Node>
+					</Node>
+					<Node score="1" recordCount="7">
+						<True/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="7"/>
+					</Node>
+				</Node>
+				<Node score="1" recordCount="39">
+					<True/>
+					<ScoreDistribution value="0" recordCount="0"/>
+					<ScoreDistribution value="1" recordCount="39"/>
+				</Node>
+			</Node>
+			<Node score="0" recordCount="6">
+				<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.12878787517547607"/>
+				<ScoreDistribution value="0" recordCount="6"/>
+				<ScoreDistribution value="1" recordCount="0"/>
+			</Node>
+			<Node>
+				<SimplePredicate field="double(x4)" operator="lessOrEqual" value="0.5"/>
+				<Node>
+					<SimplePredicate field="double(x11)" operator="lessOrEqual" value="0.5"/>
+					<Node score="0" recordCount="14">
+						<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.5833333134651184"/>
+						<ScoreDistribution value="0" recordCount="14"/>
+						<ScoreDistribution value="1" recordCount="0"/>
+					</Node>
+					<Node score="1" recordCount="5">
+						<True/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="5"/>
+					</Node>
+				</Node>
+				<Node>
+					<SimplePredicate field="double(x8)" operator="lessOrEqual" value="0.5"/>
+					<Node score="1" recordCount="8">
+						<SimplePredicate field="double(x15)" operator="lessOrEqual" value="0.5"/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="8"/>
+					</Node>
+					<Node score="1" recordCount="4">
+						<SimplePredicate field="double(x10)" operator="lessOrEqual" value="0.5"/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="4"/>
+					</Node>
+					<Node score="1" recordCount="2">
+						<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.6363636255264282"/>
+						<ScoreDistribution value="0" recordCount="0"/>
+						<ScoreDistribution value="1" recordCount="2"/>
+					</Node>
+					<Node score="0" recordCount="3">
+						<SimplePredicate field="double(x2)" operator="lessOrEqual" value="0.689393937587738"/>
+						<ScoreDistribution value="0" recordCount="2"/>
+						<ScoreDistribution value="1" recordCount="1"/>
+					</Node>
+					<Node score="0" recordCount="5">
+						<True/>
+						<ScoreDistribution value="0" recordCount="5"/>
+						<ScoreDistribution value="1" recordCount="0"/>
+					</Node>
+				</Node>
+				<Node score="1" recordCount="38">
+					<True/>
+					<ScoreDistribution value="0" recordCount="0"/>
+					<ScoreDistribution value="1" recordCount="38"/>
+				</Node>
+			</Node>
+			<Node score="1" recordCount="71">
+				<True/>
+				<ScoreDistribution value="0" recordCount="0"/>
+				<ScoreDistribution value="1" recordCount="71"/>
+			</Node>
+		</Node>
+	</TreeModel>
+</PMML>
