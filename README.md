@@ -13,4 +13,4 @@ The model was trained on a [lung cancer dataset](https://www.kaggle.com/datasets
 - K Nearest Neighbors
 - RNA Multi-Layer Perceptron
 
-The most accurate algorithm was the Decision Tree, which was exported as a `.joblib` file for this API to handle.
+The most accurate algorithm was the Decision Tree, which was exported as a `.joblib` file for this API to handle. Despite being the most accurate, the model may give some questionable results, likely due to the dataset having too few records and variables such as age, as well as the target variable being highly unbalanced.
